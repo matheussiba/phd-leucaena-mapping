@@ -21,9 +21,13 @@ phd-leucaena-mapping (this repo)
 │   Crowdmapping web platform (leucaena.earth)
 │   Live at: https://map.leucaena.earth
 │
-└── leucaena-earth-segmentation
-    Deep learning pipeline for binary segmentation
-    Optical + LiDAR → ResUNet → Leucaena maps
+├── leucaena-earth-segmentation
+│   Deep learning pipeline for binary segmentation
+│   Optical + LiDAR → ResUNet → Leucaena maps
+│
+└── leucaena-earth-utils
+    Python/R utilities — QGIS scripts, notebooks, Quarto
+    Grid prep, spatial joins, small analysis tools
 ```
 
 ### Repositories
@@ -33,6 +37,7 @@ phd-leucaena-mapping (this repo)
 | **[phd-leucaena-mapping](https://github.com/matheussiba/phd-leucaena-mapping)** | Project hub — docs, notebooks, analysis | Jupyter, Python |
 | **[leucaena-earth-platform](https://github.com/matheussiba/leucaena-earth-platform)** | Crowdmapping web platform ([leucaena.earth](https://leucaena.earth)) | Node.js, Express, SQLite, Google Maps |
 | **[leucaena-earth-segmentation](https://github.com/matheussiba/leucaena-earth-segmentation)** | Binary segmentation pipeline (optical + LiDAR) | Python, PyTorch, GDAL |
+| **[leucaena-earth-utils](https://github.com/matheussiba/leucaena-earth-utils)** | Shared Python/R utilities — QGIS tools, scripts, Quarto | Python, R, Quarto |
 
 ### Data Flow
 
@@ -134,6 +139,15 @@ python train.py -e 1
 python prediction.py -e 1
 python evaluation.py -e 1
 ```
+
+### 3. Shared utilities (Python / R / Quarto)
+
+```bash
+git clone https://github.com/matheussiba/leucaena-earth-utils.git
+cd leucaena-earth-utils
+```
+
+See that repository’s [README](https://github.com/matheussiba/leucaena-earth-utils/blob/main/README.md) for folder layout (`python/scripts`, `r/quarto`, etc.).
 
 ---
 
